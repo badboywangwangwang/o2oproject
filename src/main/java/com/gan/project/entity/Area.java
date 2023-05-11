@@ -5,10 +5,13 @@ import java.util.Date;
 public class Area {
 	
 	//ID
-	private Integer areaid;
+	private Long areaId;
 
 	//名称
 	private String areaName;
+	
+	//
+	private String areaDesc;
 
 	//权重
 	private Integer priority;
@@ -16,15 +19,12 @@ public class Area {
 	//创建时间
 	private Date createTime;
 
-	//更新时间
-	private Date lastEditTime;
-
-	public Integer getAreaid() {
-		return areaid;
+	public Long getAreaId() {
+		return areaId;
 	}
 
-	public void setAreaid(Integer areaid) {
-		this.areaid = areaid;
+	public void setAreaId(Long areaId) {
+		this.areaId = areaId;
 	}
 
 	public String getAreaName() {
@@ -33,6 +33,14 @@ public class Area {
 
 	public void setAreaName(String areaName) {
 		this.areaName = areaName;
+	}
+
+	public String getAreaDesc() {
+		return areaDesc;
+	}
+
+	public void setAreaDesc(String areaDesc) {
+		this.areaDesc = areaDesc;
 	}
 
 	public Integer getPriority() {
@@ -59,10 +67,7 @@ public class Area {
 		this.lastEditTime = lastEditTime;
 	}
 
+	//更新时间
+	private Date lastEditTime;
 
-	
-	
-	
-	
-	
 }
