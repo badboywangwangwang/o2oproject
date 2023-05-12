@@ -18,6 +18,9 @@ public class Area {
 
 	//创建时间
 	private Date createTime;
+	
+	//更新时间
+	private Date lastEditTime;
 
 	public Long getAreaId() {
 		return areaId;
@@ -67,7 +70,6 @@ public class Area {
 		this.lastEditTime = lastEditTime;
 	}
 
-	//更新时间
-	private Date lastEditTime;
+
 
 }
