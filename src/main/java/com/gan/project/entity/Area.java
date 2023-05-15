@@ -70,6 +70,4 @@ public class Area {
 		this.lastEditTime = lastEditTime;
 	}
 
-
-
 }
