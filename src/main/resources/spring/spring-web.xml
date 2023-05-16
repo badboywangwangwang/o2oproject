@@ -49,4 +49,50 @@
 	</bean>
 	<!-- 4.扫描web相关的bean -->
 	<context:component-scan base-package="com.gan.project.web" />
+	<!-- 5.权限拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/shop/**" />
+			<mvc:exclude-mapping path="/shop/ownerlogin" />
+			<mvc:exclude-mapping path="/shop/ownerlogincheck" />
+			<mvc:exclude-mapping path="/shop/logout" />
+			<mvc:exclude-mapping path="/shop/register" />
+			<bean id="ShopInterceptor" class="com.gan.project.interceptor.shop.ShopLoginInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/shop/**" />
+			<mvc:exclude-mapping path="/shop/ownerlogin" />
+			<mvc:exclude-mapping path="/shop/ownerlogincheck" />
+			<mvc:exclude-mapping path="/shop/register" />
+			<!-- shoplist page -->
+			<mvc:exclude-mapping path="/shop/shoplist" />
+			<mvc:exclude-mapping path="/shop/logout" />
+			<mvc:exclude-mapping path="/shop/list" />
+			<!-- changepsw page -->
+			<mvc:exclude-mapping path="/shop/changepsw" />
+			<mvc:exclude-mapping path="/shop/changelocalpwd" />							
+			<!-- ownerbind page -->
+			<mvc:exclude-mapping path="/shop/ownerbind" />
+			<mvc:exclude-mapping path="/shop/bindlocalauth" />
+			<!-- shopmanage page -->
+			<mvc:exclude-mapping path="/shop/shopmanage" />
+			<!-- shopedit page -->
+			<mvc:exclude-mapping path="/shop/shopedit" />
+			<mvc:exclude-mapping path="/shop/getshopbyid" />
+			<mvc:exclude-mapping path="/shop/getshopinitinfo" />
+			<mvc:exclude-mapping path="/shop/registershop" />
+			<bean id="ShopPermissionInterceptor"
+				class="com.gan.project.interceptor.shop.ShopPermissionInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/superadmin/**" />
+			<mvc:exclude-mapping path="/superadmin/login" />
+			<mvc:exclude-mapping path="/superadmin/logincheck" />
+			<mvc:exclude-mapping path="/superadmin/main" />
+			<mvc:exclude-mapping path="/superadmin/top" />
+			<bean id="SuperAdminInterceptor"
+				class="com.gan.project.interceptor.superadmin.SuperAdminLoginInterceptor" />
+		</mvc:interceptor>
+
+	</mvc:interceptors>
 </beans>

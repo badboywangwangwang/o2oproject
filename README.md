@@ -4,4 +4,13 @@
 ## http://localhost:8080/o2oproject/
 
 
-## http://localhost:8080/o2oproject/superadmin/listareas 
+
+## admin
+###  http://localhost:8080/o2oproject/superadmin/login
+
+## shop
+###  http://localhost:8080/o2oproject/shop/ownerlogin
+
+## frontend
+###  http://localhost:8080/o2oproject/frontend/index
+

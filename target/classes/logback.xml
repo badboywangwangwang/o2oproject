@@ -2,9 +2,9 @@
 <configuration debug="false">
 	<appender name="INFO-FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${catalina.base}/webapps/myo2o/logs/info/info.log</file>
+		<file>${catalina.base}/webapps/o2oproject/logs/info/info.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${catalina.base}/webapps/myo2o/logs/info/info.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+			<fileNamePattern>${catalina.base}/webapps/o2oproject/logs/info/info.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>1024MB</maxFileSize>
@@ -20,9 +20,9 @@
 	<appender name="ACCESS-FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>
-			${catalina.base}/webapps/myo2o/logs/access/access.log</file>
+			${catalina.base}/webapps/o2oproject/logs/access/access.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>${catalina.base}/webapps/myo2o/logs/access/access.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
+			<FileNamePattern>${catalina.base}/webapps/o2oproject/logs/access/access.%d{yyyy-MM-dd}.%i.log.zip</FileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>1024MB</maxFileSize>
@@ -35,7 +35,7 @@
 			</pattern>
 		</layout>
 	</appender>
-	<logger name="com.imooc.myo2o" level="DEBUG" additivity="false">
+	<logger name="com.gan.project" level="DEBUG" additivity="false">
 		<appender-ref ref="ACCESS-FILE" />
 	</logger>
 	<root level="INFO">

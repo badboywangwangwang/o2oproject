@@ -3,14 +3,14 @@ $(function() {
 	var maxItems = 20;
 	var pageSize = 10;
 
-	var listUrl = '/myo2o/frontend/listproductsbyshop';
+	var listUrl = '/o2oproject/frontend/listproductsbyshop';
 
 	var pageNum = 1;
 	var shopId = getQueryString('shopId');
 	var productCategoryId = '';
 	var productName = '';
 
-	var searchDivUrl = '/myo2o/frontend/listshopdetailpageinfo?shopId='
+	var searchDivUrl = '/o2oproject/frontend/listshopdetailpageinfo?shopId='
 			+ shopId;
 
 	function getSearchDivData() {
@@ -122,7 +122,7 @@ $(function() {
 					'.card',
 					function(e) {
 						var productId = e.currentTarget.dataset.productId;
-						window.location.href = '/myo2o/frontend/productdetail?productId='
+						window.location.href = '/o2oproject/frontend/productdetail?productId='
 								+ productId;
 					});
 
